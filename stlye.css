@@ -1,0 +1,132 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Cabin:ital,wght@0,400..700;1,400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap');    margin: 0;
+ 
+
+* {
+    padding: 0;
+    box-sizing: border-box;
+   font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background types:"video/mp4"src="VI.mp4" ;   
+}
+
+section{
+    background-color: #fffeec ;
+    padding: 30px;
+    width: 500px;
+    border-radius: 20px;
+}
+
+section h1{
+    font-size: 30px;
+    text-align: center;
+    color: #CBD83B;
+    margin-bottom: 30px;
+}
+
+.input-box{
+    width: 100%;
+    position: relative;
+    margin-bottom: 25px;
+
+}
+.input-box input{
+    width: 95%;
+    padding: 15px;
+    border-radius: 25px;
+    outline: none;
+    background-color: transparent;
+    border: 2px solid #CBD83B;
+    color: #000;
+}
+.input-box input::placeholder{
+    color: #CBD83B;
+}
+
+button{
+    width: 100%;
+    padding: 15px;
+    border-radius: 25px;
+    outline: none;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #CBD83B;
+    transition: 0.5s;
+
+}
+button :hover{
+    background-color: transparent;
+    border: 2px solid #CBD83B;
+    color: #CBD83B;
+}
+
+.register-lik{
+  text-align: center;
+  margin: 25px;
+  font-size: 14px;
+  color: #BCD4CC
+}
+
+#resultat{
+    background: linear-gradient(135deg, #e8fcd6, #d3f9b5);
+    color: #2f5d31;
+    border: 1px solid #a3d27b;
+    border-radius: 12px;
+    padding: 15px 20px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 0 0 10px rgba(50, 100, 50, 0.2);
+    margin-top: 15px;
+    animation: pop 0.4s ease;
+}
+
+#bg-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* pour que la vidéo remplisse tout l’écran */
+    z-index: -1;        /* la mettre derrière le contenu */
+}
+@keyframes pop {
+    0% { transform: scale(0.9); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

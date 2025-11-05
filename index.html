@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <title> Algorithme d'Euclide</title>
+    <link rel="stylesheet" href="Style.css">
+    <video autoplay muted loop id="bg-video">
+    <source src="VI.mp4" type="video/mp4">
+    </video>
+</head>
+<body>
+    <section>
+   <h1>Trouver le PGCD de a et b</h1> 
+       
+        <form onsubmit="calculerPGCD(); return false;">
+            <div class="input-box">
+                <input 
+                type="number" 
+                placeholder="Nombre a" 
+                id="a" 
+                min="1"
+                required>
+            </div>
+
+            <div class="input-box">
+                <input 
+                type="number"
+                placeholder="Nombre b"
+                id="b" 
+                min="1"
+                required>
+            </div>
+
+            <button type="button" onclick="calculerPGCD()">Calculer</button>
+
+            <div class="register-lik">
+       <p>Équations diophantiennes lineaire <br>
+        <a href="ax+by=c.html">ax+by=c</a>
+     </div>
+        </form>
+        <div id="resultat"></div>
+    
+
+    
+  <script>
+    function calculerPGCD() {
+      let a = parseInt(document.getElementById("a").value);
+      let b = parseInt(document.getElementById("b").value);
+      let c = parseInt(document.getElementById("b").value);
+      let resultatDiv = document.getElementById("resultat");
+
+      if (isNaN(a) || isNaN(b) || a <= 0 || b <= 0) {
+        resultatDiv.innerHTML = "⚠️ Entrez deux nombres positifs.";
+        return;
+      }
+
+      let etapes = "";
+      let originalA = a, originalB = b;
+      let i = 1;
+
+      etapes += `<strong>➡️ Étapes du calcul :</strong><br><br>`;
+
+      while (b !== 0) {
+        let q = Math.floor(a / b);
+        let r = a % b;
+        etapes += `Étape ${i} : ${a} = ${b} × ${q} + ${r}<br>`;
+        a = b;
+        b = r;
+        i++;
+      }
+    let pgcd = a;
+
+     // --- Affichage du résultat final ---
+      etapes += `<br><strong>✅ Le PGCD(${originalA}, ${originalB}) = ${pgcd}</strong><br>`;
+
+     // --- Vérification : entiers entre eux ---
+        if (pgcd === 1) {
+              etapes += `<br>🟢 ${originalA} et ${originalB} sont premiers entre eux.`;
+       }
+
+     // Affichage sur la page
+     resultatDiv.innerHTML = etapes;
+    }
+  </script>
+    </section>
+    
+</body>
+</html>
